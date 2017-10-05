@@ -1,0 +1,17 @@
+{
+  "name": "async-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "server": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "koa": "^2.3.0",
+    "koa-compress": "^2.0.0",
+    "koa-router": "^7.2.1"
+  }
+}

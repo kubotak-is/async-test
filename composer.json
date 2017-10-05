@@ -1,0 +1,12 @@
+{
+    "name": "kubotak-is/async-test",
+    "authors": [
+        {
+            "name": "kubotak-is",
+            "email": "kubotak@istyle.co.jp"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
