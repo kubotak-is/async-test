@@ -1,20 +1,21 @@
 <?hh
 
+$time_start = microtime(true);
+
 async function run(Vector $num): Awaitable<Vector>
 {
     $handles = $num->map($i ==> \HH\Asio\curl_exec("http://localhost:3000/test/{$i}"));
     return await \HH\Asio\v($handles);
 }
 
-$time_start = microtime(true);
 $num = Vector{};
-for ($i = 0; $i < 100; ++$i) {
+for ($i = 0; $i < 1000; ++$i) {
   $num->add($i);
 }
 
 $results = \HH\Asio\join(run($num));
 foreach ($results as $result) {
-  echo "{$result}";
+  echo "{$result}\n";
 }
 
 $time = microtime(true) - $time_start;
